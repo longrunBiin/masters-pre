@@ -3,9 +3,16 @@ package week2.num5;
 import java.util.ArrayList;
 
 public class GradeManagementSystem {
+    FileInput fileInput;
+    FileOutput userInput;
+
+    public GradeManagementSystem() {
+        fileInput = new FileInput();
+        userInput = new FileOutput();
+    }
 
     public void manage() {
-        FileInput fileInput = new FileInput();
+        userInput.addNewStudent();
         ArrayList<String[]> studentData = fileInput.getDataFromFile();
         ArrayList<Student> students = parsingData(studentData);
 

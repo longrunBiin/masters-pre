@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Student {
     private String name;
-    private int studentNumber;
+    private static int studentNumber = 1003;
     private String major;
     private int korean;
     private int math;
@@ -17,6 +17,10 @@ public class Student {
         this.korean = korean;
         this.math = math;
         this.english = english;
+    }
+
+    public static int getStudentNumber() {
+        return studentNumber++;
     }
 
     public Grade getGradeData() {
